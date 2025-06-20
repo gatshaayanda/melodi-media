@@ -1,26 +1,25 @@
-// src/app/admin/layout.tsx
-import { cookies } from 'next/headers'
-import { redirect } from 'next/navigation'
-import React, { ReactNode } from 'react'
+import { cookies } from 'next/headers';
+import { redirect } from 'next/navigation';
+import React, { ReactNode } from 'react';
 
 export const metadata = {
-  title: 'AdminHub – Secure Area',
-}
+  title: 'IYTRONE Admin – Secure Area',
+};
 
 export default async function AdminLayout({ children }: { children: ReactNode }) {
-  // 1. Read the cookie store (server-side)
-  const store = await cookies()
-  const token = store.get('admin_token')?.value
+  const store = await cookies();
+  const token = store.get('admin_token')?.value;
 
-  // 2. If no token, redirect immediately to /login
   if (!token) {
-    redirect('/login')
+    redirect('/login');
   }
 
-  // 3. Otherwise render the admin subtree
   return (
-    <>
-      {children}
-    </>
-  )
+    <main className="min-h-screen bg-[#F1F5F9] text-[#0B1A33]">
+      <div className="max-w-6xl mx-auto px-6 py-10">
+        <h1 className="text-2xl font-bold mb-6">🛠 Admin Panel – IYTRONE Electronics</h1>
+        <div className="bg-white p-6 rounded-xl shadow">{children}</div>
+      </div>
+    </main>
+  );
 }

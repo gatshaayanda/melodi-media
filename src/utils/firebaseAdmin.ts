@@ -1,11 +1,9 @@
-// src/utils/firebaseAdmin.ts
 import * as admin from 'firebase-admin'
 
-// Parse your JSON‐encoded credentials out of the env var
-// (make sure FIREBASE_ADMIN_KEY is set in Vercel as the full JSON blob)
-const serviceAccount = JSON.parse(
-  process.env.FIREBASE_ADMIN_KEY!
-) as admin.ServiceAccount
+const raw = process.env.FIREBASE_ADMIN_KEY
+if (!raw) throw new Error('FIREBASE_ADMIN_KEY env variable is missing')
+
+const serviceAccount = JSON.parse(raw) as admin.ServiceAccount
 
 if (!admin.apps.length) {
   admin.initializeApp({

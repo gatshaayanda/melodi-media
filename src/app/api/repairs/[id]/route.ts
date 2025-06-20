@@ -1,13 +1,15 @@
-// src/app/api/blog/[id]/route.ts
+// src/app/api/repairs/[id]/route.ts
 import { NextResponse } from 'next/server'
-import { adminDb }      from '@/utils/firebaseAdmin'
+import { doc, deleteDoc } from 'firebase/firestore'
+import { firestore } from '@/utils/firebaseConfig'
 
 export async function DELETE(
-  request: Request,
+  _request: Request,
   { params }: { params: { id: string } }
 ) {
   try {
-    await adminDb.collection('blogs').doc(params.id).delete()
+    const repairRef = doc(firestore, 'repairs', params.id)
+    await deleteDoc(repairRef)
     return NextResponse.json({ success: true })
   } catch (err: any) {
     return NextResponse.json({ error: err.message }, { status: 500 })

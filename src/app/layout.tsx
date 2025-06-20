@@ -1,3 +1,4 @@
+// src/app/layout.tsx
 import type { Metadata } from 'next';
 import { Geist, Geist_Mono } from 'next/font/google';
 import './globals.css';
@@ -12,9 +13,9 @@ const geistSans = Geist({ variable: '--font-geist-sans', subsets: ['latin'] });
 const geistMono = Geist_Mono({ variable: '--font-geist-mono', subsets: ['latin'] });
 
 export const metadata: Metadata = {
-  title: 'AdminHub',
+  title: 'IYTRONE Electronics',
   description:
-    'Boutique digital partner delivering fast, scalable Next.js & Firebase web platforms.',
+    'Tech repair and product sales company delivering trusted electronics services in Botswana.',
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
@@ -23,15 +24,17 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       <body
         className={`min-h-screen flex flex-col ${geistSans.variable} ${geistMono.variable} antialiased bg-gradient-to-br from-[#bce2ff] to-[#62A3E3]`}
       >
-                <AnalyticsProvider>
-        <Loader />
-        <div className="sticky top-0 z-50 bg-white/80 backdrop-blur shadow-sm">
-          <Header />
-        </div>
-        <main className="flex-grow bg-white bg-opacity-90">{children}</main>
-        <Footer />
-        <Analytics />
-        <SpeedInsights />
+        <AnalyticsProvider>
+          <Loader />
+          <div className="sticky top-0 z-50 bg-white/80 backdrop-blur border-b border-gray-200 shadow-sm">
+            <Header />
+          </div>
+          <main className="flex-grow bg-white bg-opacity-95 rounded-t-3xl shadow-inner p-4 md:p-8">
+            {children}
+          </main>
+          <Footer />
+          <Analytics />
+          <SpeedInsights />
         </AnalyticsProvider>
       </body>
     </html>

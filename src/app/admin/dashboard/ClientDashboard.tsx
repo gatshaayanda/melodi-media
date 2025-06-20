@@ -1,53 +1,60 @@
-// src/app/admin/dashboard/ClientDashboard.tsx
-'use client'
+'use client';
 
-import { useRouter } from 'next/navigation'
+import { useRouter } from 'next/navigation';
 import {
-  UserCircle,
+  Wrench,
   PlusCircle,
-  Newspaper,
+  ShoppingCart,
   Mail,
-  BarChart2,
   LogOut,
-} from 'lucide-react'
+  UserCircle,
+} from 'lucide-react';
 
 export default function ClientDashboard() {
-  const router = useRouter()
+  const router = useRouter();
 
   const handleLogout = async () => {
     await fetch('/api/logout', {
-      method:      'POST',
+      method: 'POST',
       credentials: 'include',
-    })
-    router.replace('/login')
-  }
+    });
+    router.replace('/login');
+  };
 
   return (
     <div className="px-6 py-8 max-w-4xl mx-auto space-y-8">
       {/* Header */}
       <div className="flex items-center justify-between">
-        <h1 className="flex items-center gap-2 text-3xl font-bold">
-          <UserCircle size={32} /> Dashboard
+        <h1 className="flex items-center gap-2 text-3xl font-bold text-[#0E3A62]">
+          <UserCircle size={32} /> Admin Panel
         </h1>
         <button
           onClick={handleLogout}
-          className="flex items-center gap-2 bg-red-500 text-white px-4 py-2 rounded"
+          className="flex items-center gap-2 bg-red-600 text-white px-4 py-2 rounded hover:bg-red-700 transition"
         >
           <LogOut size={16} /> Logout
         </button>
       </div>
 
       {/* Quick Actions */}
-      <div className="flex flex-wrap gap-3 bg-white p-4 rounded shadow">
-
-        <a href="/admin/blog" className="flex items-center gap-2 bg-green-500 text-white px-4 py-2 rounded">
-          <Newspaper size={16} /> Open Blog Portal
+      <div className="grid sm:grid-cols-2 gap-4 bg-white p-6 rounded-xl shadow">
+        <a
+          href="/admin/repairs"
+          className="flex items-center gap-3 p-4 rounded-lg bg-gradient-to-br from-[#bce2ff] to-[#62A3E3] text-[#0E3A62] font-semibold hover:opacity-90 transition"
+        >
+          <Wrench size={20} /> Repair Journal Dashboard
         </a>
+
+
+        <a
+          href="mailto:noreplyadhubmvp@gmail.com"
+          className="flex items-center gap-3 p-4 rounded-lg bg-[#5999d4] text-white font-semibold hover:opacity-90 transition"
+        >
+          <Mail size={20} /> Contact Admin Hub
+        </a>
+
+
       </div>
-
-
-
-   
     </div>
-  )
+  );
 }

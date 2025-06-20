@@ -1,10 +1,9 @@
-// src/app/about/page.tsx
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'About Us – AdminHub',
+  title: 'About Us – IYTRONE Electronics',
   description:
-    'Learn more about AdminHub, our mission, partnerships, and vision for the future.',
+    'Learn about IYTRONE Electronics (Pty) Ltd — our skills, mission, equipment needs, and how we support tech users in Botswana.',
 };
 
 export default function AboutPage() {
@@ -15,75 +14,56 @@ export default function AboutPage() {
         <div className="container mx-auto text-center space-y-6">
           <h1 className="text-4xl font-bold">📍 Who We Are</h1>
           <p className="text-lg text-[#4F5F7A]">
-            AdminHub is The Boutique Digital Partner. Our team leverages 10+ years of ICT experience to
-            deliver powerful, scalable web platforms — combining{' '}
-            <span className="font-semibold text-[#0E3A62]">Next.js</span>,{' '}
-            <span className="font-semibold text-[#0E3A62]">Firebase</span>, and AI tooling.
+            IYTRONE Electronics (Pty) Ltd is a Botswana-based repair and tech support company founded
+            by George Mapurazi. We specialize in professional electronics repairs and trusted product sales.
           </p>
           <p className="text-[#4F5F7A]">
-            We help small businesses, founders, and creators launch faster with enterprise-grade tech —
-            delivered concierge-style.
+            Our mission is to help customers stay connected by restoring and maintaining the devices
+            they rely on — phones, laptops, accessories, and more.
           </p>
         </div>
       </section>
 
-      {/* Our Capabilities */}
+      {/* Skills & Equipment */}
       <section className="py-20 bg-[#F1F1F1] text-[#0B1A33]">
         <div className="container mx-auto space-y-12">
-          {/* Global-Ready Payments */}
           <div>
-            <h2 className="text-2xl font-semibold mb-2">🌍 Global-Ready Payments</h2>
+            <h2 className="text-2xl font-semibold mb-2">🛠 Our Expertise</h2>
             <p className="text-[#4F5F7A]">
-              We’ve integrated seamless payment gateways: <strong>Scotiabank</strong> for international
-              clients and <strong>FNB</strong> for African partners. Whether you’re in New York or
-              Gaborone, your digital operations can transact globally.
+              With hands-on skills across a range of hardware, we troubleshoot and fix even complex
+              issues. From screen replacements to micro soldering, every repair is handled with care.
             </p>
           </div>
 
-          {/* Strategic Partnerships */}
           <div>
-            <h2 className="text-2xl font-semibold mb-2">🤝 Strategic Partnerships</h2>
+            <h2 className="text-2xl font-semibold mb-2">🔧 Tools We Need</h2>
             <p className="text-[#4F5F7A]">
-              AdminHub actively collaborates with forward-thinking organizations. Our recent
-              partnerships include:
+              Our work would be even more efficient with access to critical tools like:
             </p>
             <ul className="list-disc list-inside text-[#4F5F7A] mt-2 space-y-1">
-              <li>
-                <strong>MIT Kuo Sharper Center & BDIH</strong> — international innovation collaboration
-              </li>
-              <li>
-                <strong>LEA</strong> — government enterprise authority refining our business plan
-              </li>
-              <li>
-                <strong>Youth Development Fund</strong> — national committee supporting our high-level
-                service delivery
-              </li>
-              <li>
-                <strong>Small Business Association of Botswana</strong> — enabling 600+ local small
-                businesses
-              </li>
-              <li>
-                <strong>MKT Firm</strong> — our reseller in digital transformation
-              </li>
+              <li>Digital microscopes</li>
+              <li>Rotary tools & breadboards</li>
+              <li>Oscilloscopes</li>
+              <li>Reballing machines</li>
             </ul>
-          </div>
-
-          {/* Endorsements */}
-          <div>
-            <h2 className="text-2xl font-semibold mb-2">✅ Endorsed & Trusted!</h2>
-            <p className="text-[#4F5F7A]">
-              Our model is endorsed by the <strong>Small Business Association Botswana (SBAB)</strong> and{' '}
-              <strong>LEA</strong>. We’re also part of Botswana’s <strong>YDF 2025</strong> program to
-              scale AdminHub nationally.
+            <p className="text-[#4F5F7A] mt-2">
+              Investing in these will help us deliver even higher quality results.
             </p>
           </div>
 
-          {/* What’s Ahead */}
           <div>
-            <h2 className="text-2xl font-semibold mb-2">🚀 What’s Ahead</h2>
+            <h2 className="text-2xl font-semibold mb-2">🎯 Our Goals</h2>
             <p className="text-[#4F5F7A]">
-              This year we aim to secure Youth Development Fund financing, cementing our local
-              credibility before expanding internationally.
+              We aim to grow our client base, build trust in our brand, and attract new opportunities
+              — including potential support from business development funds or equipment sponsorships.
+            </p>
+          </div>
+
+          <div>
+            <h2 className="text-2xl font-semibold mb-2">🤝 Our Promise</h2>
+            <p className="text-[#4F5F7A]">
+              Whether you're here to fix a device or buy tech gear, you'll get personalized service,
+              real expertise, and a commitment to quality that sets us apart.
             </p>
           </div>
         </div>

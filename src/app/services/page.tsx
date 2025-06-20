@@ -1,35 +1,39 @@
-// src/app/services/page.tsx
 import { Metadata } from 'next';
-import { Code, RefreshCcw, ArrowRightCircle } from 'lucide-react';
+import { Wrench, Laptop2, ShoppingBag, PhoneCall } from 'lucide-react';
 
 export const metadata: Metadata = {
-  title: 'Services – AdminHub',
-  description: 'Discover AdminHub’s full range of design, build, and care-plan offerings.',
+  title: 'Services – IYTRONE Electronics',
+  description:
+    'Explore IYTRONE Electronics’ repair services, tech product sales, and customer support offerings.',
 };
 
 export default function ServicesPage() {
   const services = [
     {
-      icon: <Code size={36} className="text-[#C5A100]" />,
-      title: 'Design & Build',
-      desc: 'Custom websites and apps crafted to meet your business goals.',
+      icon: <Wrench size={36} className="text-[#0E3A62]" />,
+      title: 'Electronics Repairs',
+      desc: 'We diagnose and repair smartphones, laptops, TVs, and more using professional tools and expertise.',
     },
     {
-      icon: <RefreshCcw size={36} className="text-[#C5A100]" />,
-      title: 'Care Plans',
-      desc: 'We maintain and optimize your platform monthly—so you don’t have to.',
+      icon: <ShoppingBag size={36} className="text-[#0E3A62]" />,
+      title: 'Tech Product Sales',
+      desc: 'We offer quality phones, laptops, and accessories for sale — competitively priced and locally available.',
     },
     {
-      icon: <ArrowRightCircle size={36} className="text-[#C5A100]" />,
-      title: 'Scale & Evolve',
-      desc: 'Add features as your business grows. Iterate with confidence.',
+      icon: <PhoneCall size={36} className="text-[#0E3A62]" />,
+      title: 'Support & Quotes',
+      desc: 'Need advice, help with a device, or a repair estimate? We’re available by phone or email.',
     },
   ];
 
   return (
     <section className="py-20 bg-[#F1F1F1] text-[#0B1A33]">
       <div className="container mx-auto max-w-5xl text-center space-y-12">
-        <h1 className="text-4xl font-bold">🛠 Services</h1>
+        <h1 className="text-4xl font-bold">🔧 Our Services</h1>
+        <p className="text-[#4F5F7A] max-w-2xl mx-auto">
+          Whether your device is broken or you need new gear, we’re here to help with reliable
+          solutions and friendly service.
+        </p>
         <div className="grid gap-10 md:grid-cols-3">
           {services.map(({ icon, title, desc }) => (
             <div

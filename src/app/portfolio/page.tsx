@@ -1,51 +1,52 @@
-// src/app/portfolio/page.tsx
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Portfolio – AdminHub',
-  description: 'Explore projects built with AdminHub’s Next.js & Firebase framework.',
+  title: 'Portfolio – Melodi Media',
+  description:
+    'Explore campaigns and creative work delivered by Melodi Media, from brand activations to social storytelling.',
 };
 
 export default function PortfolioPage() {
   const projects = [
     {
-      title: 'Texas Papa (🇰🇷 Korean/English)',
-      desc: 'Bilingual site with Korean-English toggle and mobile-first experience.',
-      link: 'https://texaspapa.vercel.app/',
+      title: 'Avani Winter Soiree Campaign',
+      desc: 'Full digital rollout including influencer strategy, content creation, and sponsor integration.',
+      link: '#',
     },
     {
-      title: 'Small Business Association',
-      desc: 'Supporting rollout to 600+ businesses via AdminHub partnership.',
-      link: 'https://small-business-association.vercel.app/',
+      title: 'Brand Identity for XYZ Events',
+      desc: 'From logo to launch — a full creative suite including graphics, social content, and video promo.',
+      link: '#',
     },
     {
-      title: 'MKT Corporate Firm',
-      desc: 'Botswana-based partner agency focused on digital automation.',
-      link: 'https://mkt-corporate-firm.vercel.app/',
+      title: 'Hospitality Launch Media Kit',
+      desc: 'Produced press releases, visuals, and influencer outreach for a major hotel reopening.',
+      link: '#',
     },
     {
-      title: 'BGR Chapel',
-      desc: 'Modern church platform with sermon content and events.',
-      link: 'https://blazing-generation-revival-chapel.vercel.app/',
+      title: 'Social Awareness PSA Series',
+      desc: 'Video series addressing youth empowerment, mental health, and social change themes.',
+      link: '#',
     },
     {
-      title: 'Bling Deep Chess Academy',
-      desc: 'Digital school for youth-focused chess education.',
-      link: 'https://bling-deep-chess-academy.vercel.app/',
+      title: 'Retail Brand Influencer Collab',
+      desc: 'Micro-influencer activation with live campaign tracking and measurable engagement.',
+      link: '#',
     },
     {
-      title: 'Sports Center Botswana',
-      desc: 'Sports news and promotions portal for youth athletics.',
-      link: 'https://sports-center-botswana.vercel.app/',
+      title: 'Event Design & PR Rollout',
+      desc: 'From press coverage to media day coordination — we handled full brand visibility.',
+      link: '#',
     },
   ];
 
   return (
-    <section className="py-20 bg-white text-[#0B1A33]">
-      <div className="container mx-auto max-w-5xl space-y-8 text-center">
-        <h1 className="text-4xl font-bold">🖼 Portfolio</h1>
+    <section className="py-20 bg-white text-[#101F33]">
+      <div className="container mx-auto max-w-6xl space-y-8 text-center">
+        <h1 className="text-4xl font-bold">🎬 Our Portfolio</h1>
         <p className="text-[#4F5F7A] max-w-xl mx-auto">
-          These are real-world projects built using AdminHub’s Next.js & Firebase framework.
+          These are just a few examples of how we help brands stand out through strategy, storytelling,
+          and design. More coming soon.
         </p>
 
         <div className="grid gap-10 md:grid-cols-2 text-left">
@@ -60,7 +61,7 @@ export default function PortfolioPage() {
                 href={link}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-[#C5A100] font-medium hover:underline"
+                className="text-[#3F76BF] font-medium hover:underline"
               >
                 View Project →
               </a>

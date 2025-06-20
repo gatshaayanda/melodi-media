@@ -9,18 +9,18 @@ export default function Header() {
 
   const pages = [
     { label: 'Home', path: '/' },
-    { label: 'About', path: '/about' },
+    { label: 'About Us', path: '/about' },
     { label: 'Services', path: '/services' },
-    { label: 'Gallery', path: '/gallery' },
-    { label: 'Repairs Journal', path: '/repairs' }, // formerly blog
+    { label: 'Portfolio', path: '/portfolio' },
+    { label: 'Blog', path: '/blog' }, // optional blog path
     { label: 'Contact', path: '/contact' },
   ];
 
   return (
     <header className="w-full bg-white/90 backdrop-blur-sm shadow-md sticky top-0 z-50">
       <div className="container flex items-center justify-between px-4 py-4">
-        <Link href="/" className="text-2xl font-extrabold text-[#0E3A62] tracking-tight">
-          IYTRONE
+        <Link href="/" className="text-2xl font-extrabold text-[#3F76BF] tracking-tight">
+          Melodi Media
         </Link>
 
         {/* Mobile toggle */}
@@ -42,7 +42,7 @@ export default function Header() {
             <Link
               key={label}
               href={path}
-              className="text-[#0E3A62] font-medium hover:text-[#62A3E3] transition"
+              className="text-[#101F33] font-medium hover:text-[#3F76BF] transition"
             >
               {label}
             </Link>

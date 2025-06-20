@@ -13,23 +13,23 @@ const geistSans = Geist({ variable: '--font-geist-sans', subsets: ['latin'] });
 const geistMono = Geist_Mono({ variable: '--font-geist-mono', subsets: ['latin'] });
 
 export const metadata: Metadata = {
-  title: 'IYTRONE Electronics',
+  title: 'Melodi Media',
   description:
-    'Tech repair and product sales company delivering trusted electronics services in Botswana.',
+    'Melodi Media is a 360° digital marketing agency based in Botswana — specializing in PR, content production, and brand transformation.',
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en">
       <body
-        className={`min-h-screen flex flex-col ${geistSans.variable} ${geistMono.variable} antialiased bg-gradient-to-br from-[#bce2ff] to-[#62A3E3]`}
+        className={`min-h-screen flex flex-col ${geistSans.variable} ${geistMono.variable} antialiased bg-gradient-to-br from-[#A7D4F5] to-[#3F76BF]`}
       >
         <AnalyticsProvider>
           <Loader />
           <div className="sticky top-0 z-50 bg-white/80 backdrop-blur border-b border-gray-200 shadow-sm">
             <Header />
           </div>
-          <main className="flex-grow bg-white bg-opacity-95 rounded-t-3xl shadow-inner p-4 md:p-8">
+          <main className="flex-grow bg-white bg-opacity-95 rounded-t-3xl shadow-inner p-4 sm:p-6 md:p-10">
             {children}
           </main>
           <Footer />

@@ -1,7 +1,7 @@
 'use client';
 import { useEffect, useState } from 'react';
 
-export default function IYTRONELoader() {
+export default function AdminHubLoader() {
   const [visible, setVisible] = useState(true);
   const [fading, setFading] = useState(false);
 
@@ -18,18 +18,18 @@ export default function IYTRONELoader() {
 
   return (
     <div
-      className={`fixed inset-0 z-50 flex flex-col items-center justify-center bg-gradient-to-br from-[#bce2ff] to-[#62A3E3] transition-opacity duration-700 ${
+      className={`fixed inset-0 z-50 flex flex-col items-center justify-center bg-gradient-to-br from-[#A7D4F5] to-[#3F76BF] transition-opacity duration-700 ${
         fading ? 'opacity-0' : 'opacity-100'
       }`}
     >
       <div className="relative flex items-center justify-center mb-6">
-        <div className="animate-spin rounded-full h-20 w-20 border-t-4 border-b-4 border-[#0E3A62] opacity-60"></div>
-        <span className="absolute text-3xl font-extrabold text-[#0E3A62] tracking-wide">
-          IE
+        <div className="animate-spin rounded-full h-20 w-20 border-t-4 border-b-4 border-white opacity-70"></div>
+        <span className="absolute text-3xl font-extrabold text-white tracking-widest">
+          MM
         </span>
       </div>
-      <span className="animate-pulse text-[#0E3A62] font-medium">
-        Loading IYTRONE...
+      <span className="animate-pulse text-white font-medium tracking-wide">
+        Loading Melodi Media...
       </span>
     </div>
   );

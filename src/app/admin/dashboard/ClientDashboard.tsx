@@ -2,12 +2,12 @@
 
 import { useRouter } from 'next/navigation';
 import {
-  Wrench,
+  FileText,
   PlusCircle,
-  ShoppingCart,
   Mail,
   LogOut,
   UserCircle,
+  LayoutDashboard,
 } from 'lucide-react';
 
 export default function ClientDashboard() {
@@ -25,8 +25,8 @@ export default function ClientDashboard() {
     <div className="px-6 py-8 max-w-4xl mx-auto space-y-8">
       {/* Header */}
       <div className="flex items-center justify-between">
-        <h1 className="flex items-center gap-2 text-3xl font-bold text-[#0E3A62]">
-          <UserCircle size={32} /> Admin Panel
+        <h1 className="flex items-center gap-2 text-3xl font-bold text-[#3F76BF]">
+          <UserCircle size={32} /> Melodi Admin Panel
         </h1>
         <button
           onClick={handleLogout}
@@ -39,21 +39,18 @@ export default function ClientDashboard() {
       {/* Quick Actions */}
       <div className="grid sm:grid-cols-2 gap-4 bg-white p-6 rounded-xl shadow">
         <a
-          href="/admin/repairs"
-          className="flex items-center gap-3 p-4 rounded-lg bg-gradient-to-br from-[#bce2ff] to-[#62A3E3] text-[#0E3A62] font-semibold hover:opacity-90 transition"
+          href="/admin/blog/"
+          className="flex items-center gap-3 p-4 rounded-lg bg-gradient-to-br from-[#A7D4F5] to-[#76acf3] text-[#101F33] font-semibold hover:opacity-90 transition"
         >
-          <Wrench size={20} /> Repair Journal Dashboard
+          <FileText size={20} /> Blog Manager
         </a>
-
 
         <a
           href="mailto:noreplyadhubmvp@gmail.com"
-          className="flex items-center gap-3 p-4 rounded-lg bg-[#5999d4] text-white font-semibold hover:opacity-90 transition"
+          className="flex items-center gap-3 p-4 rounded-lg bg-[#b5cff0] text-white font-semibold hover:opacity-90 transition"
         >
           <Mail size={20} /> Contact Admin Hub
         </a>
-
-
       </div>
     </div>
   );

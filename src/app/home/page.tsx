@@ -4,14 +4,13 @@ import Link from 'next/link';
 import { useEffect, useRef, useState } from 'react';
 import { useRouter } from 'next/navigation';
 import {
-  Wrench,
-  Phone,
-  Laptop2,
-  Monitor,
-  Camera,
-  ShieldCheck,
-  Timer,
-  BadgeCheck,
+  Megaphone,
+  Video,
+  Image as ImageIcon,
+  Users,
+  Lightbulb,
+  Calendar,
+  PenTool,
 } from 'lucide-react';
 
 export default function HomePage() {
@@ -50,64 +49,64 @@ export default function HomePage() {
       {/* Hero */}
       <section
         {...longPress}
-        className="bg-gradient-to-br from-[#0E3A62] to-[#62A3E3] text-white text-center py-24 px-6"
+        className="bg-gradient-to-br from-[#A7D4F5] to-[#3F76BF] text-white text-center py-24 px-6"
       >
         <h1 className="text-4xl sm:text-5xl font-extrabold mb-4 drop-shadow-md">
-          {greeting} {emoji}, we repair & power your tech.
+          {greeting} {emoji}, welcome to Melodi Media.
         </h1>
         <p className="text-lg max-w-2xl mx-auto mb-8">
-          IYTRONE Electronics (Pty) Ltd helps you stay connected — we fix laptops, phones,
-          accessories and more using professional tools and passion.
+          A 360° PR, content production, and digital marketing agency dedicated to transforming
+          brands through creative strategy and powerful storytelling.
         </p>
         <Link
           href="#contact"
-          className="inline-block bg-white text-[#0E3A62] px-8 py-3 rounded-full font-bold hover:bg-gray-100 transition"
+          className="inline-block bg-white text-[#3F76BF] px-8 py-3 rounded-full font-bold hover:bg-gray-100 transition"
         >
-          📞 Book a Repair
+          📩 Let’s Talk Strategy
         </Link>
       </section>
 
-      {/* Devices we service */}
+      {/* Core Services */}
       <section className="py-20 bg-white text-center">
-        <h2 className="text-2xl font-bold mb-10">🛠️ What We Fix</h2>
+        <h2 className="text-2xl font-bold mb-10">🎯 What We Do</h2>
         <div className="grid grid-cols-2 md:grid-cols-4 gap-6 px-6 max-w-5xl mx-auto">
           {[
-            { icon: <Phone size={32} />, label: 'Phones' },
-            { icon: <Laptop2 size={32} />, label: 'Laptops' },
-            { icon: <Monitor size={32} />, label: 'Monitors/TVs' },
-            { icon: <Camera size={32} />, label: 'Accessories' },
+            { icon: <Megaphone size={28} />, label: 'PR & Marketing' },
+            { icon: <Video size={28} />, label: 'Content Creation' },
+            { icon: <Users size={28} />, label: 'Influencer Collabs' },
+            { icon: <Calendar size={28} />, label: 'Event Activations' },
           ].map(({ icon, label }) => (
-            <div key={label} className="flex flex-col items-center gap-2 text-[#0E3A62]">
-              <div className="bg-[#bce2ff] p-4 rounded-full">{icon}</div>
+            <div key={label} className="flex flex-col items-center gap-2 text-[#3F76BF]">
+              <div className="bg-[#E3F1FA] p-4 rounded-full">{icon}</div>
               <p className="font-medium">{label}</p>
             </div>
           ))}
         </div>
       </section>
 
-      {/* Why Choose Us */}
+      {/* Why Melodi */}
       <section className="py-20 bg-[#F9FAFB] text-center">
-        <h2 className="text-2xl font-bold mb-10">💡 Why Choose IYTRONE?</h2>
+        <h2 className="text-2xl font-bold mb-10">💡 Why Melodi Media?</h2>
         <div className="grid gap-8 px-6 max-w-4xl mx-auto md:grid-cols-3">
           {[
             {
-              icon: <ShieldCheck size={32} />,
-              title: 'Expert Tools',
-              desc: 'We use microscopes, reballing stations, and diagnostic gear for quality results.',
+              icon: <Lightbulb size={28} />,
+              title: 'Creative Strategy',
+              desc: 'We craft campaigns that emotionally connect with your audience and leave impact.',
             },
             {
-              icon: <Timer size={32} />,
-              title: 'Fast Turnaround',
-              desc: 'We know time matters. Expect prompt, reliable service without delays.',
+              icon: <PenTool size={28} />,
+              title: 'Design-Led Thinking',
+              desc: 'Every visual is intentional. We blend aesthetics with functionality for modern results.',
             },
             {
-              icon: <BadgeCheck size={32} />,
-              title: 'Real Experience',
-              desc: 'Decades of hands-on knowledge with real customer tech issues.',
+              icon: <ImageIcon size={28} />,
+              title: 'Portfolio Proven',
+              desc: 'With events like the Avani Winter Soiree, we’ve helped brands shine louder.',
             },
           ].map(({ icon, title, desc }) => (
             <div key={title} className="p-6 bg-white shadow rounded-xl text-left">
-              <div className="text-[#0E3A62] mb-3">{icon}</div>
+              <div className="text-[#3F76BF] mb-3">{icon}</div>
               <h3 className="font-bold text-lg mb-1">{title}</h3>
               <p className="text-sm text-[#4F5F7A]">{desc}</p>
             </div>
@@ -115,35 +114,35 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Gallery placeholder */}
+      {/* Featured Placeholder */}
       <section className="py-20 bg-white text-center">
-        <h2 className="text-2xl font-bold mb-6">📸 Workshop Gallery</h2>
+        <h2 className="text-2xl font-bold mb-6">🌟 Featured Work</h2>
         <p className="text-[#4F5F7A] mb-8 max-w-xl mx-auto">
-          See some of our real work — repairs in action, tools on the bench, and happy devices!
+          Check out our campaign rollouts, behind-the-scenes content, and creative outputs for clients.
         </p>
         <div className="grid grid-cols-2 md:grid-cols-3 gap-4 px-6 max-w-5xl mx-auto">
           {[...Array(6)].map((_, i) => (
             <div
               key={i}
-              className="aspect-square bg-[#e6f0f8] rounded-lg shadow-inner flex items-center justify-center text-[#0E3A62] font-semibold"
+              className="aspect-square bg-[#e6f0f8] rounded-lg shadow-inner flex items-center justify-center text-[#3F76BF] font-semibold"
             >
-              Image {i + 1}
+              Portfolio {i + 1}
             </div>
           ))}
         </div>
       </section>
 
       {/* CTA */}
-      <section id="contact" className="py-20 bg-[#0E3A62] text-white text-center">
-        <h2 className="text-2xl font-bold mb-4">📬 Let’s Work on Your Tech</h2>
+      <section id="contact" className="py-20 bg-[#3F76BF] text-white text-center">
+        <h2 className="text-2xl font-bold mb-4">📞 Ready to Build Your Brand?</h2>
         <p className="mb-6 max-w-xl mx-auto">
-          Email George directly or stop by to talk repairs, tools, or electronics solutions.
+          Reach out to us for strategic consultations, media partnerships, and creative campaigns.
         </p>
         <Link
-          href="mailto:mapurazigeorge@gmail.com"
-          className="bg-white text-[#0E3A62] px-8 py-3 rounded-full font-bold hover:bg-gray-200 transition"
+          href="mailto:tumorathedi@gmail.com"
+          className="bg-white text-[#3F76BF] px-8 py-3 rounded-full font-bold hover:bg-gray-200 transition"
         >
-          📧 mapurazigeorge@gmail.com
+          📧 tumorathedi@gmail.com
         </Link>
       </section>
     </>

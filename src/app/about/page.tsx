@@ -1,69 +1,70 @@
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'About Us – IYTRONE Electronics',
+  title: 'About Us – Melodi Media',
   description:
-    'Learn about IYTRONE Electronics (Pty) Ltd — our skills, mission, equipment needs, and how we support tech users in Botswana.',
+    'Discover Melodi Media — a 360° marketing, PR, and content production agency based in Gaborone. We help brands connect and grow through strategy and creativity.',
 };
 
 export default function AboutPage() {
   return (
     <>
       {/* Who We Are */}
-      <section className="py-20 bg-white text-[#0B1A33]">
+      <section className="py-20 bg-white text-[#101F33]">
         <div className="container mx-auto text-center space-y-6">
-          <h1 className="text-4xl font-bold">📍 Who We Are</h1>
-          <p className="text-lg text-[#4F5F7A]">
-            IYTRONE Electronics (Pty) Ltd is a Botswana-based repair and tech support company founded
-            by George Mapurazi. We specialize in professional electronics repairs and trusted product sales.
+          <h1 className="text-4xl font-bold">🌐 Who We Are</h1>
+          <p className="text-lg text-[#4F5F7A] max-w-3xl mx-auto">
+            Melodi Media is a Gaborone-based digital marketing and PR agency offering 360° brand
+            solutions. We exist to help businesses connect meaningfully with their audiences through
+            strategic communication, immersive content, and unforgettable campaigns.
           </p>
-          <p className="text-[#4F5F7A]">
-            Our mission is to help customers stay connected by restoring and maintaining the devices
-            they rely on — phones, laptops, accessories, and more.
+          <p className="text-[#4F5F7A] max-w-2xl mx-auto">
+            We don’t just follow trends — we help shape them. Whether you're launching a product,
+            building a community, or refreshing your identity, we bring the creative and technical firepower
+            to make it resonate.
           </p>
         </div>
       </section>
 
-      {/* Skills & Equipment */}
-      <section className="py-20 bg-[#F1F1F1] text-[#0B1A33]">
+      {/* What We Offer */}
+      <section className="py-20 bg-[#F1F5F9] text-[#101F33]">
         <div className="container mx-auto space-y-12">
           <div>
-            <h2 className="text-2xl font-semibold mb-2">🛠 Our Expertise</h2>
+            <h2 className="text-2xl font-semibold mb-2">🎥 What We Offer</h2>
             <p className="text-[#4F5F7A]">
-              With hands-on skills across a range of hardware, we troubleshoot and fix even complex
-              issues. From screen replacements to micro soldering, every repair is handled with care.
-            </p>
-          </div>
-
-          <div>
-            <h2 className="text-2xl font-semibold mb-2">🔧 Tools We Need</h2>
-            <p className="text-[#4F5F7A]">
-              Our work would be even more efficient with access to critical tools like:
+              Our services blend digital and traditional media to deliver results-driven storytelling:
             </p>
             <ul className="list-disc list-inside text-[#4F5F7A] mt-2 space-y-1">
-              <li>Digital microscopes</li>
-              <li>Rotary tools & breadboards</li>
-              <li>Oscilloscopes</li>
-              <li>Reballing machines</li>
+              <li>Social media strategy, campaigns, and influencer marketing</li>
+              <li>Professional content creation — video, audio, graphic design</li>
+              <li>PR, media relations, and brand activations</li>
+              <li>Event marketing and production support</li>
             </ul>
-            <p className="text-[#4F5F7A] mt-2">
-              Investing in these will help us deliver even higher quality results.
+          </div>
+
+          <div>
+            <h2 className="text-2xl font-semibold mb-2">📍 Our Clients</h2>
+            <p className="text-[#4F5F7A]">
+              We’ve worked with brands across industries — from hospitality to events — delivering
+              measurable growth and standout creative. One of our notable campaigns includes the{" "}
+              <strong>Avani Winter Soiree</strong>, where we drove digital buzz, influencer
+              engagement, and strategic visibility.
             </p>
           </div>
 
           <div>
-            <h2 className="text-2xl font-semibold mb-2">🎯 Our Goals</h2>
+            <h2 className="text-2xl font-semibold mb-2">🌱 Our Vision</h2>
             <p className="text-[#4F5F7A]">
-              We aim to grow our client base, build trust in our brand, and attract new opportunities
-              — including potential support from business development funds or equipment sponsorships.
+              We envision a creative ecosystem in Botswana and beyond where stories are amplified,
+              messages are elevated, and brands feel human again.
             </p>
           </div>
 
           <div>
-            <h2 className="text-2xl font-semibold mb-2">🤝 Our Promise</h2>
+            <h2 className="text-2xl font-semibold mb-2">🤝 Why Choose Us</h2>
             <p className="text-[#4F5F7A]">
-              Whether you're here to fix a device or buy tech gear, you'll get personalized service,
-              real expertise, and a commitment to quality that sets us apart.
+              You’re not just hiring an agency — you’re gaining a partner. We bring insight,
+              dedication, and unmatched creativity to every client relationship.
             </p>
           </div>
         </div>

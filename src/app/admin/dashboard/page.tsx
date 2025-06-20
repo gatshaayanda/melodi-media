@@ -3,8 +3,8 @@ import { redirect } from 'next/navigation';
 import ClientDashboard from './ClientDashboard';
 
 export const metadata = {
-  title: 'IYTRONE Admin – Dashboard',
-  description: 'Secure area for managing repairs and business records.',
+  title: 'Melodi Media Admin – Dashboard',
+  description: 'Manage blog posts, campaigns, and creative content securely.',
 };
 
 export default async function AdminDashboardPage() {

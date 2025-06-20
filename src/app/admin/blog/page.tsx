@@ -6,24 +6,24 @@ import { collection, getDocs, query, where } from 'firebase/firestore';
 import { firestore } from '@/utils/firebaseConfig';
 import AdminHubLoader from '@/components/AdminHubLoader';
 
-export default function RepairJournalPage() {
+export default function BlogManagerPage() {
   const [loading, setLoading] = useState(true);
-  const [repairs, setRepairs] = useState<{ id: string; device: string }[]>([]);
+  const [posts, setPosts] = useState<{ id: string; title: string }[]>([]);
 
   useEffect(() => {
     (async () => {
       try {
         const snap = await getDocs(
-          query(collection(firestore, 'repairs'), where('admin_id', '==', 'admin'))
+          query(collection(firestore, 'blog_posts'), where('admin_id', '==', 'admin'))
         );
-        setRepairs(
+        setPosts(
           snap.docs.map(doc => ({
             id: doc.id,
-            device: doc.data().device || 'Unnamed Device',
+            title: doc.data().title || 'Untitled Post',
           }))
         );
       } catch (err) {
-        console.error('Failed to load repair records', err);
+        console.error('Failed to load blog posts', err);
       } finally {
         setLoading(false);
       }
@@ -39,31 +39,31 @@ export default function RepairJournalPage() {
       </Link>
 
       <div className="flex items-center justify-between">
-        <h1 className="text-2xl font-bold">📒 Repair Journal</h1>
+        <h1 className="text-2xl font-bold">📝 Blog Manager</h1>
         <Link
-          href="/admin/repairs/new"
-          className="inline-block bg-[#64b1f8] text-white px-4 py-2 rounded hover:opacity-90"
+          href="/admin/blog/create"
+          className="inline-block bg-[#e2eeff] text-white px-4 py-2 rounded hover:opacity-90"
         >
-          + New Entry
+          + New Post
         </Link>
       </div>
 
-      {repairs.length === 0 ? (
-        <p className="italic text-gray-500">No repair records yet.</p>
+      {posts.length === 0 ? (
+        <p className="italic text-gray-500">No blog posts yet.</p>
       ) : (
         <ul className="space-y-2">
-          {repairs.map(r => (
-            <li key={r.id} className="flex justify-between border-b pb-2">
-              <span>{r.device}</span>
+          {posts.map(post => (
+            <li key={post.id} className="flex justify-between border-b pb-2">
+              <span>{post.title}</span>
               <div className="space-x-2">
                 <Link
-                  href={`/admin/repairs/${r.id}/edit`}
+                     href={`/admin/blog/${post.id}/edit`}
                   className="text-blue-600 hover:underline"
                 >
                   Edit
                 </Link>
                 <Link
-                  href={`/admin/repairs/${r.id}`}
+                  href={`/admin/blog/${post.id}`}
                   className="text-gray-500 hover:underline"
                 >
                   View

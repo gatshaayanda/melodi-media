@@ -6,12 +6,12 @@
 /* 2. CSS variables for theming */
 :root {
   --background: #ffffff;
-  --foreground: #1f2937;
-  --background-dark: #0a0a0a;
-  --foreground-dark: #f3f4f6;
-  --brand-primary: #62A3E3;
-  --brand-secondary: #bce2ff;
-  --brand-accent: #0E3A62;
+  --foreground: #111827;
+  --background-dark: #09090b;
+  --foreground-dark: #f9fafb;
+  --brand-primary: #3F76BF; /* deeper tech blue */
+  --brand-secondary: #A7D4F5; /* soft modern cyan */
+  --brand-accent: #101F33; /* bold navy text */
   --font-sans: var(--font-geist-sans), sans-serif;
   --font-mono: var(--font-geist-mono), monospace;
 }
@@ -50,14 +50,21 @@ body {
 }
 
 /* 5. Typography & links */
-a { color: var(--brand-accent); text-decoration: none; }
-a:hover { color: var(--brand-primary); text-decoration: underline; }
-
-h1,h2,h3,h4,h5,h6 {
-  font-family: var(--font-sans);
-  font-weight: 600;
-  margin-top: .5rem;
+a {
+  color: var(--brand-primary);
+  text-decoration: none;
+  font-weight: 500;
+}
+a:hover {
   color: var(--brand-accent);
+  text-decoration: underline;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-sans);
+  font-weight: 700;
+  color: var(--brand-accent);
+  margin-top: .5rem;
 }
 
 /* 6. Buttons */
@@ -79,7 +86,7 @@ button:hover {
 /* 7. Form controls */
 input, textarea, select {
   font-family: var(--font-sans);
-  border: 1px solid #ccc;
+  border: 1px solid #cbd5e1;
   border-radius: .375rem;
   padding: .5rem .75rem;
   width: 100%;
@@ -89,16 +96,18 @@ input, textarea, select {
 input:focus, textarea:focus, select:focus {
   outline: none;
   border-color: var(--brand-primary);
-  box-shadow: 0 0 0 2px rgba(98, 163, 227, 0.25);
+  box-shadow: 0 0 0 2px rgba(63, 118, 191, 0.25);
 }
 
 /* 8. Section spacing */
-section { padding: 3rem 0; }
+section {
+  padding: 4rem 0;
+}
 
 /* 9. Footer */
 footer {
-  background: var(--brand-secondary);
-  color: #1f2937;
+  background: linear-gradient(to bottom right, var(--brand-secondary), var(--brand-primary));
+  color: #ffffff;
   padding: 2rem 1rem;
   text-align: center;
 }
